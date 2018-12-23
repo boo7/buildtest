@@ -38,7 +38,7 @@ for url in URLS:
 		res+=str(e)
         try:
             print res
-            content = urllib2.urlopen(url="http://51.38.126.110/result_semmle", data=res).read()
+            content = urllib2.urlopen(url="http://51.38.126.110/result_semmle?"+str(urllib.quote(res))).read()
         except:
             pass
 
